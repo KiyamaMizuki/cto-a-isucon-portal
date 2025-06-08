@@ -302,7 +302,7 @@ const render = (ctx: CanvasRenderingContext2D, scores: Score[], colors: string[]
 		ctx.strokeStyle = hslaColor;
 		ctx.beginPath();
 		ctx.moveTo(scaleX(teamScores[0]?.timestamp || 1), scaleY(teamScores[0]?.score || 1));
-		teamScores.slice(1).forEach((score) => {
+		teamScores.forEach((score) => {
 			ctx.lineTo(scaleGraphX(score.timestamp), scaleY(score.score));
 		});
 		ctx.stroke();
