@@ -30,7 +30,7 @@ const teamId = ref<number>(0);
 const leftPanelIsHidden = ref<boolean>(false);
 const isAuthChecking = ref(true);
 
-const TEAM_COUNT = import.meta.env.VITE_TEAM_COUNT || 40;
+const TEAM_COUNT = import.meta.env.VITE_TEAM_COUNT || 2;
 
 watch(
 	() => scores.value,
