@@ -141,7 +141,7 @@ const fetchTeamNames = async () => {
 	try {
 		const response = await fetch(sheetAPIEndpoint);
 		const data = await response.json();
-		const rowData = data.sheets[0].data[0].rowData.slice(1);
+		const rowData = data.sheets[0].data[0].rowData;
 
 		teamNames.value = rowData.map((row: any, index: number) => {
 			return row.values[1]?.formattedValue || `チーム${index}`;
