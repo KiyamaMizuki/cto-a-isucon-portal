@@ -29,7 +29,7 @@ aws cognito-idp admin-confirm-sign-up \
 echo "Admin: Username=${ADMIN_USERNAME}, Password=${ADMIN_PASSWORD}"
 
 # チームごとのユーザーの作成
-for ((i=1; i<=NUM_TEAMS; i++)); do
+for ((i=0; i<=NUM_TEAMS; i++)); do
   TEAM_USERNAME="team${i}"
   TEAM_PASSWORD=$(openssl rand -base64 12 | sed 's/[+/=]/#/g')'1!'
   aws cognito-idp sign-up \
