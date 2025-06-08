@@ -1,6 +1,6 @@
 resource "aws_amplify_app" "isucon_portal" {
-  name         = "isucon-portal"
-  repository   = var.repository
+  name       = "isucon-portal"
+  repository = var.repository
   access_token = var.access_token
 
   build_spec = file("${path.module}/build_spec.yaml")
@@ -10,11 +10,6 @@ resource "aws_amplify_app" "isucon_portal" {
   auto_branch_creation_patterns = var.auto_branch_creation_patterns
 
   # The default rewrites and redirects added by the Amplify Console.
-  custom_rule {
-    source = "https://hikakin-tv.com"
-    status = "302"
-    target = "https://www.hikakin-tv.com"
-  }
   custom_rule {
     source = "/<*>"
     status = "404"
@@ -31,10 +26,9 @@ resource "aws_amplify_app" "isucon_portal" {
     APPSYNC_REGION               = var.region
     TEAM_COUNT                   = var.team_count
   }
-  iam_service_role_arn = null
 }
 
 resource "aws_amplify_branch" "master" {
-  app_id      = aws_amplify_app.isucon_portal.id
+  app_id  = aws_amplify_app.isucon_portal.id
   branch_name = "master"
 }

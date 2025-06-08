@@ -1,7 +1,7 @@
 #!/bin/bash
 
-USER_POOL_ID="ap-northeast-1_owwW23cX9"
-CLIENT_ID="28pbs1v5v549utukg74m89o2q3"
+USER_POOL_ID="ap-northeast-1_caP94PWOg"
+CLIENT_ID="6o9v1471n8llqs5g0jbf4si1bq"
 REGION="ap-northeast-1"
 NUM_TEAMS=$1
 

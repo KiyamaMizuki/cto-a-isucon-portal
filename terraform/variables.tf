@@ -36,5 +36,5 @@ variable "account_id" {
 
 variable "team_count" {
   type    = number
-  default = 40
+  default = 2
 }
